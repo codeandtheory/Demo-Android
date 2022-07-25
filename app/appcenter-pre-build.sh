@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-echo "This is an App Center Pre-Build script. For more information on how to use App Center build scripts vist: https://docs.microsoft.com/en-us/appcenter/build/custom/scripts"
+export SONAR_SCANNER_VERSION=4.7.0.2747
+export SONAR_SCANNER_HOME=$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-macosx
+curl --create-dirs -sSLo $HOME/.sonar/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-macosx.zip
+unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
+export PATH=$SONAR_SCANNER_HOME/bin:$PATH
+export SONAR_SCANNER_OPTS="-server"
+#Sonar-Scanner runner
+sh /Users/runner/.sonar/sonar-scanner-4.7.0.2747-macosx/bin/sonar-scanner
