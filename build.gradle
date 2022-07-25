@@ -20,8 +20,8 @@ plugins {
 
 sonarqube {
   properties {
-    property "sonar.projectKey", "ymedialabs_Sample-Android"
-    property "sonar.organization", "ymedialabs"
+    property "sonar.projectKey", "sample-android-app"
+    property "sonar.organization", "sonarcloudos"
     property "sonar.host.url", "https://sonarcloud.io"
   }
 }
