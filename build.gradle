@@ -13,17 +13,6 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        jcenter()
-        google()
-    }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-
 plugins {
   id "org.sonarqube" version "3.4.0.2513"
 }
@@ -34,4 +23,15 @@ sonarqube {
     property "sonar.organization", "ymedialabs"
     property "sonar.host.url", "https://sonarcloud.io"
   }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
