@@ -6,3 +6,5 @@ curl --create-dirs -sSLo $HOME/.sonar/sonar-scanner.zip https://binaries.sonarso
 unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
 export PATH=$SONAR_SCANNER_HOME/bin:$PATH
 export SONAR_SCANNER_OPTS="-server"
+#Sonar-Scanner runner
+sh /Users/runner/.sonar/sonar-scanner-4.7.0.2747-macosx/bin/sonar-scanner
