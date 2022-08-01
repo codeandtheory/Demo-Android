@@ -33,7 +33,7 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     gradleOptions: '-Xmx3072m'
-    sonarQubeRunAnalysis: true
+    sonarQubeRunAnalysis: false
 
 - task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
