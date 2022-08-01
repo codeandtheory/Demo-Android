@@ -24,4 +24,4 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     gradleOptions: '-Xmx3072m'
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: true
