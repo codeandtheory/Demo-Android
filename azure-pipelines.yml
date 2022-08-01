@@ -20,9 +20,13 @@ steps:
   inputs:
     SonarCloud: 'ymedialabs-az-devops'
     organization: 'ymedialabs'
-    scannerMode: 'MSBuild'
-    projectKey: 'ymedialabs_Sample-Android'
-    projectName: 'Sample-Android'
+    scannerMode: 'Other'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.projectKey=ymedialabs_Sample-Android
+      sonar.projectName=Sample-Android
 - task: Gradle@2
   inputs:
     gradleWrapperFile: '$(Build.Repository.LocalPath)/gradlew'
@@ -33,7 +37,7 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     gradleOptions: '-Xmx3072m'
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: true
 
 - task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
