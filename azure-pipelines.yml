@@ -11,7 +11,7 @@ pr:
   - master
 
 pool:
-  vmImage: 'macos-latest'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: Gradle@2
