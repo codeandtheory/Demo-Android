@@ -13,7 +13,16 @@ pr:
 pool:
   vmImage: 'ubuntu-latest'
 
+
 steps:
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'ymedialabs-az-devops'
+    organization: 'ymedialabs'
+    scannerMode: 'MSBuild'
+    projectKey: 'ymedialabs_Sample-Android'
+    projectName: 'Sample-Android'
 - task: Gradle@2
   inputs:
     gradleWrapperFile: '$(Build.Repository.LocalPath)/gradlew'
@@ -25,3 +34,8 @@ steps:
     jdkVersionOption: '1.8'
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: true
+
+- task: SonarCloudAnalyze@1
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
