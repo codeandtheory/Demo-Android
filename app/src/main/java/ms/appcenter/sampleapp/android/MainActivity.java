@@ -47,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
             AppCenter.start(getApplication(), "c4fb1a4d-d0f0-43b5-ad8c-54daeb2243b4",
                     Analytics.class, Crashes.class, Distribute.class);
         }
-
+        
+        Analytics.trackEvent("Demo event");
 
         if (BuildConfig.DEBUG) {
             AppCenter.setLogLevel(Log.VERBOSE);
