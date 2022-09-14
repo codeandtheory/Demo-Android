@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-/*
+
 #echo "APPCENTER_BUILD_ID"
 #echo $APPCENTER_BUILD_ID 
 
 #echo "APPCENTER_TRIGGER"
 #echo $APPCENTER_TRIGGER
 
-#export APKPATH=$(ls /Users/runner/work/1/s/app/build/outputs/apk/lecet_staging/release/*.apk)
+#export APKPATH=$(ls /Users/runner/work/1/s/app/build/outputs/apk/example_staging/release/*.apk)
 #echo $APKPATH
 
 #Sonar-Scanner runner
@@ -24,4 +24,4 @@
 #      -F "commitMessage=$APPCENTER_TRIGGER" \
 #      -F "file=@$APKPATH" \
 #      https://axiom-api-beta.ymedia.in/upload/build
-*/
+
